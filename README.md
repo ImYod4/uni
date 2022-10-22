@@ -2,7 +2,6 @@
 
 ## How to install
 1. install [luna](https://github.com/ImYod4/luna) package.
-2. run `git clone "https://gitbub.com/ImYod4/uni.git" && cd uni
 2. run `git clone "https://gitbub.com/ImYod4/uni.git" && cd uni`
 3. run `python3 -m build`
 4. run `pip3 install --upgrade dist/<version>.tar.gz`
