@@ -1,6 +1,5 @@
 from luna.match import is_matched_parentheses
 from ._expression_tree import ExpressionTree
-from luna.priority_queue import HeapPriorityQueue
 
 
 def expression(ex):
@@ -24,17 +23,3 @@ def _build_expression_tree(token):
             s.append(ExpressionTree(op, left, right))
     return s.pop()
 
-
-def _sort(tree):
-    for position in tree.positions():
-        print(position.element())
-    heapq = HeapPriorityQueue()
-    for position in tree.positions():
-        if tree.is_leaf(position):
-            continue
-        if position.element() in '*/':
-            heapq.add(position, 0)
-        elif position.element() in '+-':
-            heapq.add(position, 1)
-        else:
-            heapq.add(position, 2)
