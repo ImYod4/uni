@@ -6,7 +6,7 @@ from luna.priority_queue import HeapPriorityQueue
 def expression(ex):
     if not is_matched_parentheses(ex):
         raise ValueError('Parentheses does not match')
-    ex = ''.join(c for c in ex.split() if c != ' ')
+    ex = ''.join(c for c in ex.split())
     return _build_expression_tree(ex)
 
 
